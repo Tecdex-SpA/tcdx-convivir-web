@@ -48,11 +48,10 @@
       padding: 18px 0;
     }
     .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -.02em; }
-    .brand-mark {
-      width: 40px; height: 40px; border-radius: 12px;
-      background: linear-gradient(135deg, var(--navy), var(--blue));
-      display: grid; place-items: center;
-      color: white; font-weight: 900;
+    .brand-logo {
+      width: 205px;
+      height: auto;
+      display: block;
     }
     .nav-links { display: flex; gap: 24px; color: var(--muted); font-size: 14px; align-items: center; }
     .button {
@@ -130,7 +129,9 @@
     .cta-box h2 { margin-bottom: 12px; }
     .cta-box p { color: rgba(255,255,255,.78); margin: 0; max-width: 720px; }
     footer { padding: 34px 0; color: var(--muted); border-top: 1px solid var(--line); }
-    .footer-grid { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .footer-grid { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
+    .footer-brand { display: flex; align-items: center; gap: 12px; }
+    .footer-brand img { width: 132px; height: auto; display: block; }
 
 
     .hero-photo {
@@ -169,6 +170,7 @@
 
     @media (max-width: 900px) {
       .nav-links { display: none; }
+      .brand-logo { width: 176px; }
       .hero-grid, .split, .cta-box, .image-grid { grid-template-columns: 1fr; }
       .cards, .security-grid, .trust-row { grid-template-columns: 1fr; }
       .metric-grid { grid-template-columns: 1fr; }
@@ -183,8 +185,7 @@
   <header class="topbar">
     <div class="container nav">
       <a class="brand" href="#inicio" aria-label="TCDX Convivir">
-        <span class="brand-mark">C</span>
-        <span>TCDX Convivir</span>
+        <img class="brand-logo" src="assets/logo-tcdx-convivir.png" alt="TCDX Convivir" />
       </a>
       <nav class="nav-links" aria-label="Navegación principal">
         <a href="#modulos">Módulos</a>
@@ -355,7 +356,7 @@
 
   <footer>
     <div class="container footer-grid">
-      <span>© TCDX / Tecdex. Plataforma SaaS para gestión interna de convivencia escolar.</span>
+      <span class="footer-brand"><img src="assets/logo-tcdx-convivir.png" alt="TCDX Convivir" />© TCDX / Tecdex. Plataforma SaaS para gestión interna de convivencia escolar.</span>
       <span>Uso institucional · Seguridad · Trazabilidad · Reportes internos</span>
     </div>
   </footer>
