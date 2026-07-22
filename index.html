@@ -5,190 +5,218 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TCDX Convivir | Plataforma SaaS para convivencia escolar</title>
   <meta name="description" content="TCDX Convivir es una plataforma SaaS para apoyar la gestión interna de convivencia escolar en establecimientos educacionales chilenos: casos, alertas, derivaciones, evidencias, reportes y trazabilidad institucional." />
-  <link rel="icon" href="data:image/png;base64,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" type="image/png" />
-  <link rel="apple-touch-icon" href="data:image/png;base64,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" />
-  <link rel="stylesheet" href="assets/header-white.css" />
+  <link rel="icon" href="https://tecdex.net/wp-content/uploads/2020/04/logosmallmicro.png" type="image/png" />
+  <link rel="apple-touch-icon" href="https://tecdex.net/wp-content/uploads/2020/04/cropped-cropped-logo-web.png" />
   <style>
     :root {
-      --navy: #0f2f45;
-      --navy-2: #123c58;
-      --blue: #1f6f9f;
-      --sky: #e8f4fa;
-      --mint: #e9f7f1;
-      --amber: #fff4df;
-      --red-soft: #fff0ef;
-      --ink: #17212b;
-      --muted: #607080;
-      --line: #dce5ea;
-      --bg: #f5f8fa;
-      --white: #ffffff;
-      --shadow: 0 18px 45px rgba(15, 47, 69, .12);
-      --radius: 22px;
+      --tcdx-primary: #F0721D;
+      --tcdx-primary-hover: #D5630F;
+      --tcdx-secondary: #51ABA8;
+      --tcdx-secondary-hover: #438E8B;
+      --tcdx-navy: #2B3944;
+      --tcdx-navy-deep: #00133B;
+      --tcdx-surface: #F2F2F2;
+      --tcdx-surface-alt: #EDEFEF;
+      --tcdx-border: #D8D8D8;
+      --tcdx-text: #777777;
+      --tcdx-ink: #161616;
+      --tcdx-warning: #FBC962;
+      --tcdx-header-border: #659BD0;
+      --tcdx-white: #FFFFFF;
+      --tcdx-radius-sm: 8px;
+      --tcdx-radius-lg: 25px;
+      --tcdx-container: 1140px;
     }
 
-    * { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--ink);
-      background: var(--bg);
+      font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      color: var(--tcdx-text);
+      background: var(--tcdx-white);
       line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
     }
     a { color: inherit; text-decoration: none; }
-    .container { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+    img { display: block; max-width: 100%; }
+    .container { width: 100%; max-width: var(--tcdx-container); margin: 0 auto; padding: 0 24px; }
+
+    h1, h2, h3, .eyebrow, .button, .nav-links a {
+      font-family: Roboto, -apple-system, "Segoe UI", Arial, sans-serif;
+    }
+    h1, h2, h3 { color: var(--tcdx-ink); margin: 0 0 16px; font-weight: 500; }
+    h1 { font-size: clamp(38px, 5vw, 58px); line-height: 1.06; text-transform: uppercase; }
+    h2 { font-size: clamp(30px, 4vw, 42px); line-height: 1.08; font-weight: 400; }
+    h3 { font-size: 22px; line-height: 1.2; }
+    p { margin: 0 0 16px; color: var(--tcdx-text); }
+
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 10;
-      backdrop-filter: blur(16px);
-      background: rgba(245, 248, 250, .86);
-      border-bottom: 1px solid rgba(220, 229, 234, .9);
+      z-index: 30;
+      background: rgba(255,255,255,.98);
+      border-top: 1px solid var(--tcdx-header-border);
+      border-bottom: 1px solid var(--tcdx-header-border);
     }
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 0;
-    }
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -.02em; }
-    .brand-logo {
-      width: 205px;
-      height: auto;
-      display: block;
-    }
-    .nav-links { display: flex; gap: 24px; color: var(--muted); font-size: 14px; align-items: center; }
-    .button {
-      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-      border-radius: 999px; padding: 13px 18px;
-      font-weight: 700; border: 1px solid transparent;
-      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
-    }
-    .button:hover { transform: translateY(-1px); }
-    .button.primary { background: var(--navy); color: white; box-shadow: 0 12px 24px rgba(15, 47, 69, .2); }
-    .button.secondary { background: white; color: var(--navy); border-color: var(--line); }
-
-    .hero { padding: 82px 0 54px; }
-    .hero-grid { display: grid; grid-template-columns: 1.04fr .96fr; gap: 48px; align-items: center; }
-    .eyebrow { color: var(--blue); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; }
-    h1 { font-size: clamp(42px, 5vw, 70px); line-height: .98; margin: 14px 0 22px; letter-spacing: -.06em; }
-    .lead { font-size: 20px; color: var(--muted); max-width: 650px; }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
-    .trust-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 34px; max-width: 690px; }
-    .trust-card { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 14px; color: var(--muted); font-size: 14px; }
-    .trust-card strong { display: block; color: var(--ink); font-size: 16px; margin-bottom: 2px; }
-
-    .dashboard {
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-    .dash-head { background: var(--navy); color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
-    .dots { display: flex; gap: 7px; }
-    .dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.5); }
-    .dash-body { padding: 22px; }
-    .metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    .metric { border: 1px solid var(--line); border-radius: 18px; padding: 16px; background: #fbfdfe; }
-    .metric span { color: var(--muted); font-size: 13px; }
-    .metric strong { display: block; font-size: 28px; margin-top: 4px; }
-    .case-list { margin-top: 18px; display: grid; gap: 12px; }
-    .case { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; padding: 14px; border: 1px solid var(--line); border-radius: 18px; }
-    .badge { padding: 6px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; }
-    .badge.green { background: var(--mint); color: #196044; }
-    .badge.amber { background: var(--amber); color: #815500; }
-    .badge.red { background: var(--red-soft); color: #a23a35; }
-    .avatar { width: 38px; height: 38px; border-radius: 14px; background: var(--sky); display: grid; place-items: center; color: var(--blue); font-weight: 900; }
-    .case-title { font-weight: 800; }
-    .case-meta { color: var(--muted); font-size: 13px; }
-
-    section { padding: 74px 0; }
-    .section-title { max-width: 760px; margin-bottom: 34px; }
-    h2 { font-size: clamp(32px, 4vw, 48px); line-height: 1.08; letter-spacing: -.04em; margin: 0 0 16px; }
-    .section-title p { color: var(--muted); font-size: 18px; margin: 0; }
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .card { background: white; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: 0 12px 28px rgba(15, 47, 69, .05); }
-    .icon { width: 46px; height: 46px; border-radius: 15px; background: var(--sky); color: var(--blue); display: grid; place-items: center; font-weight: 900; margin-bottom: 18px; }
-    .card h3 { margin: 0 0 10px; font-size: 20px; }
-    .card p { margin: 0; color: var(--muted); }
-
-    .split { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; align-items: start; }
-    .panel { background: var(--navy); color: white; border-radius: 30px; padding: 34px; box-shadow: var(--shadow); }
-    .panel p { color: rgba(255,255,255,.78); }
-    .steps { display: grid; gap: 14px; }
-    .step { display: grid; grid-template-columns: 42px 1fr; gap: 16px; background: white; border: 1px solid var(--line); border-radius: 20px; padding: 18px; }
-    .step-num { width: 42px; height: 42px; border-radius: 14px; background: var(--sky); color: var(--navy); display: grid; place-items: center; font-weight: 900; }
-    .step strong { display: block; margin-bottom: 4px; }
-    .step span { color: var(--muted); }
-
-    .security { background: white; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .security-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .security-item { border: 1px solid var(--line); border-radius: 18px; padding: 18px; background: #fbfdfe; }
-    .security-item strong { display: block; margin-bottom: 6px; }
-    .security-item span { color: var(--muted); font-size: 14px; }
-
-    .cta { padding: 76px 0; }
-    .cta-box { background: linear-gradient(135deg, var(--navy), var(--navy-2)); color: white; border-radius: 34px; padding: 48px; display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; box-shadow: var(--shadow); }
-    .cta-box h2 { margin-bottom: 12px; }
-    .cta-box p { color: rgba(255,255,255,.78); margin: 0; max-width: 720px; }
-    footer { padding: 34px 0; color: var(--muted); border-top: 1px solid var(--line); }
-    .footer-grid { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
-    .footer-brand { display: flex; align-items: center; gap: 12px; }
-    .footer-brand img { width: 132px; height: auto; display: block; }
-
-
-    .hero-photo {
+    .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand-logo { width: 176px; height: auto; }
+    .nav-links { display: flex; align-items: center; gap: 0; }
+    .nav-links a:not(.button) {
       position: relative;
-      min-height: 520px;
-      border-radius: 34px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--line);
-      background: var(--navy);
+      color: var(--tcdx-ink);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 14px 18px;
     }
-    .hero-photo img { width: 100%; height: 100%; min-height: 520px; object-fit: cover; display: block; }
-    .hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,47,69,.02), rgba(15,47,69,.62)); }
-    .photo-caption {
+    .nav-links a:not(.button)::after {
+      content: "";
       position: absolute;
-      left: 22px; right: 22px; bottom: 22px;
-      z-index: 1;
-      background: rgba(255,255,255,.92);
-      border: 1px solid rgba(255,255,255,.68);
-      border-radius: 22px;
-      padding: 18px;
-      backdrop-filter: blur(14px);
+      left: 18px;
+      right: 18px;
+      bottom: 5px;
+      height: 3px;
+      background: transparent;
     }
-    .photo-caption strong { display: block; font-size: 18px; margin-bottom: 4px; color: var(--ink); }
-    .photo-caption span { color: var(--muted); font-size: 14px; }
-    .image-band { padding-top: 18px; }
+    .nav-links a:first-child::after { background: var(--tcdx-warning); }
+    .nav-links a:hover { color: var(--tcdx-primary); }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: none;
+      border-radius: var(--tcdx-radius-lg);
+      padding: 12px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 150ms ease, color 150ms ease, transform 150ms ease;
+    }
+    .button:active { transform: translateY(1px); }
+    .button.primary { background: var(--tcdx-primary); color: var(--tcdx-white); }
+    .button.primary:hover { background: var(--tcdx-primary-hover); color: var(--tcdx-white); }
+    .button.secondary { background: transparent; color: var(--tcdx-primary); border: 1.5px solid var(--tcdx-primary); }
+    .button.secondary:hover { background: var(--tcdx-primary); color: var(--tcdx-white); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(100deg, rgba(0,19,59,.92), rgba(43,57,68,.70)), url("assets/docentes-convivencia.jpeg") center/cover no-repeat;
+      background-attachment: scroll;
+      padding: 96px 0;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -130px;
+      bottom: -160px;
+      width: 440px;
+      height: 440px;
+      border: 44px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.08fr .92fr; gap: 54px; align-items: center; }
+    .eyebrow { color: var(--tcdx-warning); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; font-size: 13px; margin-bottom: 18px; }
+    .hero h1, .hero .lead { color: var(--tcdx-white); }
+    .lead { font-size: 18px; max-width: 650px; opacity: .92; }
+    .product-logo-card {
+      margin-top: 30px;
+      width: min(360px, 100%);
+      background: rgba(255,255,255,.96);
+      border-radius: var(--tcdx-radius-sm);
+      padding: 18px 22px;
+      border: 1px solid rgba(255,255,255,.32);
+    }
+    .product-logo-card img { width: 260px; height: auto; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+    .trust-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 34px; }
+    .trust-card { background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.22); border-radius: var(--tcdx-radius-sm); padding: 14px; color: rgba(255,255,255,.82); font-size: 14px; }
+    .trust-card strong { display: block; color: var(--tcdx-white); font-size: 15px; margin-bottom: 4px; }
+
+    .hero-photo { position: relative; min-height: 460px; border-radius: var(--tcdx-radius-sm); overflow: hidden; border: 1px solid rgba(255,255,255,.22); }
+    .hero-photo img { width: 100%; height: 100%; min-height: 460px; object-fit: cover; }
+    .hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,19,59,0), rgba(0,19,59,.68)); }
+    .photo-caption { position: absolute; left: 22px; right: 22px; bottom: 22px; z-index: 1; background: rgba(255,255,255,.94); border-radius: var(--tcdx-radius-sm); padding: 18px; }
+    .photo-caption strong { display: block; color: var(--tcdx-ink); font-size: 18px; margin-bottom: 4px; }
+    .photo-caption span { color: var(--tcdx-text); font-size: 14px; }
+
+    section { padding: 72px 0; }
+    .section-title { max-width: 760px; margin-bottom: 34px; }
+    .section-title h2::after, .section-title > h2::after {
+      content: "";
+      display: block;
+      width: 56px;
+      border-bottom: 3px dotted var(--tcdx-primary);
+      margin-top: 12px;
+    }
+    .section-title p { font-size: 17px; }
+
+    .image-band { background: var(--tcdx-surface); }
     .image-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; align-items: stretch; }
-    .image-card { position: relative; overflow: hidden; border-radius: 28px; border: 1px solid var(--line); min-height: 340px; background: white; box-shadow: 0 12px 28px rgba(15, 47, 69, .07); }
+    .image-card { position: relative; overflow: hidden; border-radius: var(--tcdx-radius-sm); min-height: 340px; background: var(--tcdx-white); border: 1px solid var(--tcdx-border); }
     .image-card.large { min-height: 520px; }
     .image-stack { display: grid; gap: 18px; }
-    .image-card img { width: 100%; height: 100%; object-fit: cover; display: block; position: absolute; inset: 0; }
-    .image-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,47,69,0), rgba(15,47,69,.68)); }
-    .image-label { position: absolute; left: 20px; right: 20px; bottom: 20px; z-index: 1; color: white; }
-    .image-label strong { display: block; font-size: 22px; margin-bottom: 4px; }
-    .image-label span { color: rgba(255,255,255,.82); }
+    .image-card img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+    .image-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,19,59,0), rgba(0,19,59,.72)); }
+    .image-label { position: absolute; left: 20px; right: 20px; bottom: 20px; z-index: 1; color: var(--tcdx-white); }
+    .image-label strong { display: block; font-size: 22px; margin-bottom: 4px; color: var(--tcdx-white); }
+    .image-label span { color: rgba(255,255,255,.84); }
+
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: var(--tcdx-white); border: 1px solid var(--tcdx-border); border-radius: var(--tcdx-radius-sm); padding: 24px; box-shadow: none; }
+    .icon { width: 44px; height: 44px; border-radius: 999px; background: rgba(240,114,29,.12); color: var(--tcdx-primary); display: grid; place-items: center; font-weight: 700; margin-bottom: 18px; }
+    .card h3 { margin-bottom: 10px; }
+
+    .split { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; align-items: start; }
+    .panel { position: relative; overflow: hidden; background: var(--tcdx-navy); color: var(--tcdx-white); border-radius: var(--tcdx-radius-sm); padding: 34px; }
+    .panel::after { content: ""; position: absolute; right: -70px; bottom: -70px; width: 190px; height: 190px; border: 24px solid rgba(255,255,255,.08); border-radius: 50%; }
+    .panel h2, .panel p { color: var(--tcdx-white); }
+    .steps { display: grid; gap: 14px; }
+    .step { display: grid; grid-template-columns: 42px 1fr; gap: 16px; background: var(--tcdx-white); border: 1px solid var(--tcdx-border); border-radius: var(--tcdx-radius-sm); padding: 18px; }
+    .step-num { width: 42px; height: 42px; border-radius: 999px; background: rgba(81,171,168,.14); color: var(--tcdx-secondary-hover); display: grid; place-items: center; font-weight: 700; }
+    .step strong { display: block; color: var(--tcdx-ink); margin-bottom: 4px; }
+
+    .security { background: var(--tcdx-surface); }
+    .security-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .security-item { border: 1px solid var(--tcdx-border); border-radius: var(--tcdx-radius-sm); padding: 18px; background: var(--tcdx-white); }
+    .security-item strong { display: block; color: var(--tcdx-ink); margin-bottom: 6px; }
+    .security-item span { font-size: 14px; }
+
+    .cta { background: linear-gradient(rgba(0,19,59,.88), rgba(43,57,68,.92)), url("assets/familias-comunidad.jpeg") center/cover no-repeat; text-align: center; }
+    .cta-box { color: var(--tcdx-white); max-width: 820px; margin: 0 auto; }
+    .cta-box h2, .cta-box p { color: var(--tcdx-white); }
+    .cta-box p { opacity: .88; }
+
+    footer { background: var(--tcdx-surface); padding: 54px 0; color: var(--tcdx-text); }
+    .footer-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 30px; align-items: center; }
+    .footer-brand { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .footer-brand img { width: 132px; height: auto; }
+    .footer-meta { text-align: right; font-size: 14px; }
 
     @media (max-width: 900px) {
-      .nav-links { display: none; }
-      .brand-logo { width: 176px; }
-      .hero-grid, .split, .cta-box, .image-grid { grid-template-columns: 1fr; }
+      .nav { min-height: 68px; }
+      .brand-logo { width: 148px; }
+      .nav-links a:not(.button) { display: none; }
+      .hero { padding: 72px 0; }
+      .hero-grid, .split, .image-grid, .footer-grid { grid-template-columns: 1fr; }
       .cards, .security-grid, .trust-row { grid-template-columns: 1fr; }
-      .metric-grid { grid-template-columns: 1fr; }
-      .hero { padding-top: 52px; }
-      .hero-photo, .hero-photo img { min-height: 420px; }
+      .hero-photo, .hero-photo img { min-height: 390px; }
       .image-card.large, .image-card { min-height: 320px; }
-      .cta-box { padding: 32px; }
+      .footer-meta { text-align: left; }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container nav">
-      <a class="brand" href="#inicio" aria-label="TCDX Convivir">
-        <img class="brand-logo" src="assets/logo-tcdx-convivir.png" alt="TCDX Convivir" />
+      <a class="brand" href="#inicio" aria-label="Tecdex">
+        <img class="brand-logo" src="https://tecdex.net/wp-content/uploads/2020/04/logo-original.svg" alt="Tecdex" />
       </a>
       <nav class="nav-links" aria-label="Navegación principal">
         <a href="#modulos">Módulos</a>
@@ -210,6 +238,9 @@
             <a class="button primary" href="#contacto">Agendar presentación</a>
             <a class="button secondary" href="#modulos">Ver capacidades</a>
           </div>
+          <div class="product-logo-card" aria-label="Producto TCDX Convivir">
+            <img src="assets/logo-tcdx-convivir.png" alt="TCDX Convivir" />
+          </div>
           <div class="trust-row">
             <div class="trust-card"><strong>Multi-colegio</strong>Administración por sostenedor, establecimiento y usuario.</div>
             <div class="trust-card"><strong>Trazabilidad</strong>Registro de acciones, responsables, estados y evidencias.</div>
@@ -221,41 +252,8 @@
           <img src="assets/alumnos-convivencia.jpeg" alt="Estudiantes compartiendo en una sala de clases en un contexto de sana convivencia escolar" />
           <div class="photo-caption"><strong>Convivencia escolar visible, gestionable y trazable.</strong><span>Una plataforma pensada para equipos que necesitan ordenar casos, seguimientos y evidencias sin perder el foco humano.</span></div>
         </div>
-
-        <div class="dashboard" aria-label="Vista conceptual de dashboard TCDX Convivir" style="display:none">
-          <div class="dash-head">
-            <strong>Panel de convivencia</strong>
-            <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-          </div>
-          <div class="dash-body">
-            <div class="metric-grid">
-              <div class="metric"><span>Casos activos</span><strong>24</strong></div>
-              <div class="metric"><span>Alertas abiertas</span><strong>11</strong></div>
-              <div class="metric"><span>Derivaciones</span><strong>8</strong></div>
-            </div>
-            <div class="case-list">
-              <div class="case">
-                <div class="avatar">E</div>
-                <div><div class="case-title">Seguimiento estudiante</div><div class="case-meta">Responsable asignado · vence hoy</div></div>
-                <span class="badge amber">Prioridad media</span>
-              </div>
-              <div class="case">
-                <div class="avatar">A</div>
-                <div><div class="case-title">Alerta por reiteración</div><div class="case-meta">Curso 7°B · protocolo asociado</div></div>
-                <span class="badge red">Crítica</span>
-              </div>
-              <div class="case">
-                <div class="avatar">C</div>
-                <div><div class="case-title">Caso en cierre</div><div class="case-meta">Checklist completo · evidencias cargadas</div></div>
-                <span class="badge green">Controlado</span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
-
-
 
     <section class="image-band" aria-label="Comunidad escolar TCDX Convivir">
       <div class="container">
@@ -347,11 +345,9 @@
     <section id="contacto" class="cta">
       <div class="container">
         <div class="cta-box">
-          <div>
-            <h2>Solicita una presentación de TCDX Convivir.</h2>
-            <p>Conversemos sobre cómo ordenar la gestión de convivencia escolar de tu establecimiento o red de colegios con una plataforma SaaS segura, trazable y especializada.</p>
-          </div>
-          <a class="button secondary" href="mailto:contacto@tecdex.cl?subject=Solicitud%20demo%20TCDX%20Convivir">Contactar a TCDX</a>
+          <h2>Solicita una presentación de TCDX Convivir.</h2>
+          <p>Conversemos sobre cómo ordenar la gestión de convivencia escolar de tu establecimiento o red de colegios con una plataforma SaaS segura, trazable y especializada.</p>
+          <a class="button primary" href="mailto:contacto@tecdex.cl?subject=Solicitud%20demo%20TCDX%20Convivir">Contactar a TCDX</a>
         </div>
       </div>
     </section>
@@ -359,8 +355,8 @@
 
   <footer>
     <div class="container footer-grid">
-      <span class="footer-brand"><img src="assets/logo-tcdx-convivir.png" alt="TCDX Convivir" />© TCDX / Tecdex. Plataforma SaaS para gestión interna de convivencia escolar.</span>
-      <span>Uso institucional · Seguridad · Trazabilidad · Reportes internos</span>
+      <span class="footer-brand"><img src="https://tecdex.net/wp-content/uploads/2020/04/logo-original.svg" alt="Tecdex" />© TCDX / Tecdex. Plataforma SaaS para gestión interna de convivencia escolar.</span>
+      <span class="footer-meta">Uso institucional · Seguridad · Trazabilidad · Reportes internos</span>
     </div>
   </footer>
 </body>
