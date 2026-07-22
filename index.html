@@ -5,224 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TCDX Convivir | Plataforma SaaS para convivencia escolar</title>
   <meta name="description" content="TCDX Convivir es una plataforma SaaS para apoyar la gestión interna de convivencia escolar en establecimientos educacionales chilenos: casos, alertas, derivaciones, evidencias, reportes y trazabilidad institucional." />
-  <link rel="icon" href="https://tecdex.net/wp-content/uploads/2020/04/logosmallmicro.png" type="image/png" />
-  <link rel="apple-touch-icon" href="https://tecdex.net/wp-content/uploads/2020/04/cropped-cropped-logo-web.png" />
+  <link rel="icon" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"%3E%3Crect width="96" height="96" rx="18" fill="%232B3944"/%3E%3Ccircle cx="27" cy="50" r="18" fill="%23F9C763"/%3E%3Ccircle cx="57" cy="26" r="14" fill="%235CB2B1"/%3E%3Ccircle cx="62" cy="64" r="17" fill="%236598CC"/%3E%3Ccircle cx="27" cy="50" r="10" fill="%23DFAD54"/%3E%3Ccircle cx="57" cy="26" r="7" fill="%23fff"/%3E%3Ccircle cx="62" cy="64" r="9" fill="%23fff"/%3E%3C/svg%3E' type="image/svg+xml" />
   <style>
-    :root {
-      --tcdx-primary: #F0721D;
-      --tcdx-primary-hover: #D5630F;
-      --tcdx-secondary: #51ABA8;
-      --tcdx-secondary-hover: #438E8B;
-      --tcdx-navy: #2B3944;
-      --tcdx-navy-deep: #00133B;
-      --tcdx-surface: #F2F2F2;
-      --tcdx-surface-alt: #EDEFEF;
-      --tcdx-border: #D8D8D8;
-      --tcdx-text: #777777;
-      --tcdx-ink: #161616;
-      --tcdx-warning: #FBC962;
-      --tcdx-header-border: #659BD0;
-      --tcdx-white: #FFFFFF;
-      --tcdx-radius-sm: 8px;
-      --tcdx-radius-lg: 25px;
-      --tcdx-container: 1140px;
+    :root{
+      --orange:#F0721D;--orange-hover:#D5630F;--teal:#51ABA8;--teal-dark:#438E8B;--navy:#2B3944;--navy-deep:#00133B;--surface:#F2F2F2;--surface-alt:#EDEFEF;--border:#D8D8D8;--text:#777777;--text-strong:#444444;--ink:#161616;--warning:#FBC962;--header-border:#659BD0;--white:#fff;--radius:8px;--radius-pill:25px;--container:1140px;
     }
-
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-    body {
-      margin: 0;
-      font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-      color: var(--tcdx-text);
-      background: var(--tcdx-white);
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
-    .container { width: 100%; max-width: var(--tcdx-container); margin: 0 auto; padding: 0 24px; }
-
-    h1, h2, h3, .eyebrow, .button, .nav-links a {
-      font-family: Roboto, -apple-system, "Segoe UI", Arial, sans-serif;
-    }
-    h1, h2, h3 { color: var(--tcdx-ink); margin: 0 0 16px; font-weight: 500; }
-    h1 { font-size: clamp(38px, 5vw, 58px); line-height: 1.06; text-transform: uppercase; }
-    h2 { font-size: clamp(30px, 4vw, 42px); line-height: 1.08; font-weight: 400; }
-    h3 { font-size: 22px; line-height: 1.2; }
-    p { margin: 0 0 16px; color: var(--tcdx-text); }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      background: rgba(255,255,255,.98);
-      border-top: 1px solid var(--tcdx-header-border);
-      border-bottom: 1px solid var(--tcdx-header-border);
-    }
-    .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand-logo { width: 176px; height: auto; }
-    .nav-links { display: flex; align-items: center; gap: 0; }
-    .nav-links a:not(.button) {
-      position: relative;
-      color: var(--tcdx-ink);
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      padding: 14px 18px;
-    }
-    .nav-links a:not(.button)::after {
-      content: "";
-      position: absolute;
-      left: 18px;
-      right: 18px;
-      bottom: 5px;
-      height: 3px;
-      background: transparent;
-    }
-    .nav-links a:first-child::after { background: var(--tcdx-warning); }
-    .nav-links a:hover { color: var(--tcdx-primary); }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      border: none;
-      border-radius: var(--tcdx-radius-lg);
-      padding: 12px 24px;
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: .02em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 150ms ease, color 150ms ease, transform 150ms ease;
-    }
-    .button:active { transform: translateY(1px); }
-    .button.primary { background: var(--tcdx-primary); color: var(--tcdx-white); }
-    .button.primary:hover { background: var(--tcdx-primary-hover); color: var(--tcdx-white); }
-    .button.secondary { background: transparent; color: var(--tcdx-primary); border: 1.5px solid var(--tcdx-primary); }
-    .button.secondary:hover { background: var(--tcdx-primary); color: var(--tcdx-white); }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(100deg, rgba(0,19,59,.92), rgba(43,57,68,.70)), url("assets/docentes-convivencia.jpeg") center/cover no-repeat;
-      background-attachment: scroll;
-      padding: 96px 0;
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      right: -130px;
-      bottom: -160px;
-      width: 440px;
-      height: 440px;
-      border: 44px solid rgba(255,255,255,.08);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.08fr .92fr; gap: 54px; align-items: center; }
-    .eyebrow { color: var(--tcdx-warning); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; font-size: 13px; margin-bottom: 18px; }
-    .hero h1, .hero .lead { color: var(--tcdx-white); }
-    .lead { font-size: 18px; max-width: 650px; opacity: .92; }
-    .product-logo-card {
-      margin-top: 30px;
-      width: min(360px, 100%);
-      background: rgba(255,255,255,.96);
-      border-radius: var(--tcdx-radius-sm);
-      padding: 18px 22px;
-      border: 1px solid rgba(255,255,255,.32);
-    }
-    .product-logo-card img { width: 260px; height: auto; }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
-    .trust-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 34px; }
-    .trust-card { background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.22); border-radius: var(--tcdx-radius-sm); padding: 14px; color: rgba(255,255,255,.82); font-size: 14px; }
-    .trust-card strong { display: block; color: var(--tcdx-white); font-size: 15px; margin-bottom: 4px; }
-
-    .hero-photo { position: relative; min-height: 460px; border-radius: var(--tcdx-radius-sm); overflow: hidden; border: 1px solid rgba(255,255,255,.22); }
-    .hero-photo img { width: 100%; height: 100%; min-height: 460px; object-fit: cover; }
-    .hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,19,59,0), rgba(0,19,59,.68)); }
-    .photo-caption { position: absolute; left: 22px; right: 22px; bottom: 22px; z-index: 1; background: rgba(255,255,255,.94); border-radius: var(--tcdx-radius-sm); padding: 18px; }
-    .photo-caption strong { display: block; color: var(--tcdx-ink); font-size: 18px; margin-bottom: 4px; }
-    .photo-caption span { color: var(--tcdx-text); font-size: 14px; }
-
-    section { padding: 72px 0; }
-    .section-title { max-width: 760px; margin-bottom: 34px; }
-    .section-title h2::after, .section-title > h2::after {
-      content: "";
-      display: block;
-      width: 56px;
-      border-bottom: 3px dotted var(--tcdx-primary);
-      margin-top: 12px;
-    }
-    .section-title p { font-size: 17px; }
-
-    .image-band { background: var(--tcdx-surface); }
-    .image-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; align-items: stretch; }
-    .image-card { position: relative; overflow: hidden; border-radius: var(--tcdx-radius-sm); min-height: 340px; background: var(--tcdx-white); border: 1px solid var(--tcdx-border); }
-    .image-card.large { min-height: 520px; }
-    .image-stack { display: grid; gap: 18px; }
-    .image-card img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
-    .image-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,19,59,0), rgba(0,19,59,.72)); }
-    .image-label { position: absolute; left: 20px; right: 20px; bottom: 20px; z-index: 1; color: var(--tcdx-white); }
-    .image-label strong { display: block; font-size: 22px; margin-bottom: 4px; color: var(--tcdx-white); }
-    .image-label span { color: rgba(255,255,255,.84); }
-
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .card { background: var(--tcdx-white); border: 1px solid var(--tcdx-border); border-radius: var(--tcdx-radius-sm); padding: 24px; box-shadow: none; }
-    .icon { width: 44px; height: 44px; border-radius: 999px; background: rgba(240,114,29,.12); color: var(--tcdx-primary); display: grid; place-items: center; font-weight: 700; margin-bottom: 18px; }
-    .card h3 { margin-bottom: 10px; }
-
-    .split { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; align-items: start; }
-    .panel { position: relative; overflow: hidden; background: var(--tcdx-navy); color: var(--tcdx-white); border-radius: var(--tcdx-radius-sm); padding: 34px; }
-    .panel::after { content: ""; position: absolute; right: -70px; bottom: -70px; width: 190px; height: 190px; border: 24px solid rgba(255,255,255,.08); border-radius: 50%; }
-    .panel h2, .panel p { color: var(--tcdx-white); }
-    .steps { display: grid; gap: 14px; }
-    .step { display: grid; grid-template-columns: 42px 1fr; gap: 16px; background: var(--tcdx-white); border: 1px solid var(--tcdx-border); border-radius: var(--tcdx-radius-sm); padding: 18px; }
-    .step-num { width: 42px; height: 42px; border-radius: 999px; background: rgba(81,171,168,.14); color: var(--tcdx-secondary-hover); display: grid; place-items: center; font-weight: 700; }
-    .step strong { display: block; color: var(--tcdx-ink); margin-bottom: 4px; }
-
-    .security { background: var(--tcdx-surface); }
-    .security-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .security-item { border: 1px solid var(--tcdx-border); border-radius: var(--tcdx-radius-sm); padding: 18px; background: var(--tcdx-white); }
-    .security-item strong { display: block; color: var(--tcdx-ink); margin-bottom: 6px; }
-    .security-item span { font-size: 14px; }
-
-    .cta { background: linear-gradient(rgba(0,19,59,.88), rgba(43,57,68,.92)), url("assets/familias-comunidad.jpeg") center/cover no-repeat; text-align: center; }
-    .cta-box { color: var(--tcdx-white); max-width: 820px; margin: 0 auto; }
-    .cta-box h2, .cta-box p { color: var(--tcdx-white); }
-    .cta-box p { opacity: .88; }
-
-    footer { background: var(--tcdx-surface); padding: 54px 0; color: var(--tcdx-text); }
-    .footer-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 30px; align-items: center; }
-    .footer-brand { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
-    .footer-brand img { width: 132px; height: auto; }
-    .footer-meta { text-align: right; font-size: 14px; }
-
-    @media (max-width: 900px) {
-      .nav { min-height: 68px; }
-      .brand-logo { width: 148px; }
-      .nav-links a:not(.button) { display: none; }
-      .hero { padding: 72px 0; }
-      .hero-grid, .split, .image-grid, .footer-grid { grid-template-columns: 1fr; }
-      .cards, .security-grid, .trust-row { grid-template-columns: 1fr; }
-      .hero-photo, .hero-photo img { min-height: 390px; }
-      .image-card.large, .image-card { min-height: 320px; }
-      .footer-meta { text-align: left; }
-    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}body{margin:0;font-family:-apple-system,system-ui,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;color:var(--text);background:var(--white);line-height:1.5;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img,svg{display:block;max-width:100%}.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
+    h1,h2,h3,.eyebrow,.button,.nav-links a{font-family:Roboto,-apple-system,"Segoe UI",Arial,sans-serif}h1,h2,h3{color:var(--ink);margin:0 0 16px;font-weight:500}h1{font-size:clamp(38px,5vw,58px);line-height:1.06;text-transform:uppercase;letter-spacing:-.018em}h2{font-size:clamp(30px,4vw,42px);line-height:1.08;font-weight:400}h3{font-size:22px;line-height:1.2}p{margin:0 0 16px;color:var(--text)}
+    .topbar{position:sticky;top:0;z-index:30;background:var(--navy);border-top:1px solid var(--header-border);border-bottom:1px solid var(--header-border);box-shadow:0 8px 22px rgba(0,19,59,.22)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:26px}.brand{display:inline-flex;align-items:center;gap:12px;color:#fff}.tecdex-logo{width:180px;height:auto}.nav-links{display:flex;align-items:center;gap:0}.nav-links a:not(.button){position:relative;color:#fff;font-size:13px;font-weight:300;text-transform:uppercase;padding:13px 19px;opacity:.95}.nav-links a:not(.button)::after{content:"";position:absolute;left:19px;right:19px;bottom:3px;height:3px;background:transparent}.nav-links a:first-child::after{background:var(--warning)}.nav-links a:hover{color:var(--warning)}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;border-radius:var(--radius-pill);padding:12px 24px;font-size:15px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;cursor:pointer;transition:background 150ms ease,color 150ms ease,transform 150ms ease}.button:active{transform:translateY(1px)}.button.primary{background:var(--orange);color:var(--white)}.button.primary:hover{background:var(--orange-hover);color:var(--white)}.button.secondary{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.76)}.button.secondary:hover{background:var(--white);color:var(--navy)}.site-header__cta{background:var(--teal);border-radius:3px;padding:12px 22px!important;margin-left:8px;font-weight:500!important;color:#fff!important}.site-header__cta:hover{background:var(--teal-dark)!important;color:#fff!important}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(100deg,rgba(0,19,59,.92),rgba(43,57,68,.68)),url("assets/docentes-convivencia.jpeg") center/cover no-repeat;background-attachment:scroll;padding:98px 0}.hero::after{content:"";position:absolute;right:-120px;bottom:-150px;width:430px;height:430px;border:44px solid rgba(255,255,255,.08);border-radius:50%;pointer-events:none}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}.eyebrow{color:var(--warning);font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:13px;margin-bottom:18px}.hero h1,.hero .lead{color:var(--white)}.lead{font-size:18px;max-width:650px;opacity:.92}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.product-logo-card{margin-top:32px;width:min(390px,100%);background:rgba(255,255,255,.96);border-radius:var(--radius);padding:18px 22px;border:1px solid rgba(255,255,255,.32)}.product-logo-card small{display:block;color:var(--text);font-size:12px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}.product-logo-card img{width:275px;height:auto}.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}.trust-card{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);padding:14px;color:rgba(255,255,255,.82);font-size:14px}.trust-card strong{display:block;color:var(--white);font-size:15px;margin-bottom:4px}.hero-photo{position:relative;min-height:460px;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.22)}.hero-photo img{width:100%;height:100%;min-height:460px;object-fit:cover}.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,19,59,0),rgba(0,19,59,.68))}.photo-caption{position:absolute;left:22px;right:22px;bottom:22px;z-index:1;background:rgba(255,255,255,.94);border-radius:var(--radius);padding:18px}.photo-caption strong{display:block;color:var(--ink);font-size:18px;margin-bottom:4px}.photo-caption span{color:var(--text);font-size:14px}
+    section{padding:72px 0}.section-title{max-width:760px;margin-bottom:34px}.section-title h2::after{content:"";display:block;width:56px;border-bottom:3px dotted var(--orange);margin-top:12px}.section-title p{font-size:17px}.image-band,.security{background:var(--surface)}.image-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}.image-card{position:relative;overflow:hidden;border-radius:var(--radius);min-height:340px;background:var(--white);border:1px solid var(--border)}.image-card.large{min-height:520px}.image-stack{display:grid;gap:18px}.image-card img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.image-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,19,59,0),rgba(0,19,59,.72))}.image-label{position:absolute;left:20px;right:20px;bottom:20px;z-index:1;color:var(--white)}.image-label strong{display:block;font-size:22px;margin-bottom:4px;color:var(--white)}.image-label span{color:rgba(255,255,255,.84)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:none}.icon{width:44px;height:44px;border-radius:999px;background:rgba(240,114,29,.12);color:var(--orange);display:grid;place-items:center;font-weight:700;margin-bottom:18px}.card h3{margin-bottom:10px;color:var(--text-strong)}.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}.panel{position:relative;overflow:hidden;background:var(--navy);color:var(--white);border-radius:var(--radius);padding:34px}.panel::after{content:"";position:absolute;right:-70px;bottom:-70px;width:190px;height:190px;border:24px solid rgba(255,255,255,.08);border-radius:50%}.panel h2,.panel p{color:var(--white)}.steps{display:grid;gap:14px}.step{display:grid;grid-template-columns:42px 1fr;gap:16px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:18px}.step-num{width:42px;height:42px;border-radius:999px;background:rgba(81,171,168,.14);color:var(--teal-dark);display:grid;place-items:center;font-weight:700}.step strong{display:block;color:var(--ink);margin-bottom:4px}.security-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.security-item{border:1px solid var(--border);border-radius:var(--radius);padding:18px;background:var(--white)}.security-item strong{display:block;color:var(--ink);margin-bottom:6px}.security-item span{font-size:14px}.cta{background:linear-gradient(rgba(0,19,59,.88),rgba(43,57,68,.92)),url("assets/familias-comunidad.jpeg") center/cover no-repeat;text-align:center}.cta-box{color:var(--white);max-width:820px;margin:0 auto}.cta-box h2,.cta-box p{color:var(--white)}.cta-box p{opacity:.88}footer{background:var(--surface);padding:54px 0;color:var(--text)}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}.footer-brand{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.footer-brand .tecdex-logo{width:132px}.footer-meta{text-align:right;font-size:14px}
+    @media(max-width:900px){.nav{min-height:70px}.tecdex-logo{width:150px}.nav-links a:not(.button){display:none}.hero{padding:72px 0}.hero-grid,.split,.image-grid,.footer-grid{grid-template-columns:1fr}.cards,.security-grid,.trust-row{grid-template-columns:1fr}.hero-photo,.hero-photo img{min-height:390px}.image-card.large,.image-card{min-height:320px}.footer-meta{text-align:left}}
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container nav">
       <a class="brand" href="#inicio" aria-label="Tecdex">
-        <img class="brand-logo" src="https://tecdex.net/wp-content/uploads/2020/04/logo-original.svg" alt="Tecdex" />
+        <svg class="tecdex-logo" viewBox="0 0 1051.5 277.7" role="img" aria-label="Tecdex" xmlns="http://www.w3.org/2000/svg"><path fill="#E2E2E1" d="M279.3 137.3s-84-17-81.9-34 66.9-26.4 66.9-26.4c14.2-6.2 24.1-20.3 24.1-36.8 0-22.2-18-40.1-40.1-40.1-20.2 0-36.9 15-39.7 34.4 0 0 1.8 53.9-16.6 65.9S97.7 74 97.7 74c-7.9-2.9-16.4-4.5-25.2-4.5C32.5 69.5 0 102 0 142s32.5 72.5 72.5 72.5c26.7 0 49.9-14.4 62.5-35.8 0 0 40.8-78.7 56.3-72.2 15.4 6.5-3.9 89.7-3.9 89.7-.4 3.2-.7 6.5-.7 9.8 0 39.6 32.1 71.7 71.7 71.7s71.7-32.1 71.7-71.7c0-32.4-21.4-59.7-50.8-68.7z"/><circle fill="#F9C763" cx="70.3" cy="143.5" r="60.2"/><circle fill="#5CB2B1" cx="248.9" cy="41.3" r="36.5"/><circle fill="#3F8986" cx="248.9" cy="41.3" r="22.6"/><circle fill="#fff" cx="248.9" cy="41.3" r="18.9"/><circle fill="#6598CC" cx="261.3" cy="208.4" r="60.6"/><circle fill="#4D80AA" cx="261.3" cy="208.4" r="31.3"/><circle fill="#fff" cx="261.3" cy="208.4" r="25.8"/><text x="365" y="180" fill="#fff" font-family="Arial, sans-serif" font-size="132" font-weight="500" letter-spacing="-3">Tecdex</text></svg>
       </a>
       <nav class="nav-links" aria-label="Navegación principal">
         <a href="#modulos">Módulos</a>
         <a href="#flujo">Flujo</a>
         <a href="#seguridad">Seguridad</a>
-        <a href="#contacto" class="button primary">Solicitar demo</a>
+        <a href="#contacto" class="site-header__cta">Contacto</a>
       </nav>
     </div>
   </header>
@@ -239,6 +47,7 @@
             <a class="button secondary" href="#modulos">Ver capacidades</a>
           </div>
           <div class="product-logo-card" aria-label="Producto TCDX Convivir">
+            <small>Producto SaaS Tecdex</small>
             <img src="assets/logo-tcdx-convivir.png" alt="TCDX Convivir" />
           </div>
           <div class="trust-row">
@@ -247,7 +56,6 @@
             <div class="trust-card"><strong>API institucional</strong>Preparado para conexión con otros sistemas TCDX.</div>
           </div>
         </div>
-
         <div class="hero-photo" aria-label="Estudiantes en sana convivencia escolar">
           <img src="assets/alumnos-convivencia.jpeg" alt="Estudiantes compartiendo en una sala de clases en un contexto de sana convivencia escolar" />
           <div class="photo-caption"><strong>Convivencia escolar visible, gestionable y trazable.</strong><span>Una plataforma pensada para equipos que necesitan ordenar casos, seguimientos y evidencias sin perder el foco humano.</span></div>
@@ -255,109 +63,19 @@
       </div>
     </section>
 
-    <section class="image-band" aria-label="Comunidad escolar TCDX Convivir">
-      <div class="container">
-        <div class="section-title">
-          <h2>Convivencia escolar con mirada de comunidad.</h2>
-          <p>La gestión de convivencia no ocurre solo en una oficina: conecta estudiantes, familias, docentes, equipos directivos y responsables institucionales. TCDX Convivir ordena esa operación en un sistema único.</p>
-        </div>
-        <div class="image-grid">
-          <article class="image-card large">
-            <img src="assets/docentes-convivencia.jpeg" alt="Equipo docente reunido para trabajar acuerdos de convivencia escolar" />
-            <div class="image-label"><strong>Equipos docentes coordinados</strong><span>Seguimiento, acuerdos, responsables y acciones internas con trazabilidad.</span></div>
-          </article>
-          <div class="image-stack">
-            <article class="image-card">
-              <img src="assets/familias-comunidad.jpeg" alt="Familias y estudiantes participando en actividad escolar comunitaria" />
-              <div class="image-label"><strong>Familias involucradas</strong><span>Comunicación institucional y respaldo documental para la gestión escolar.</span></div>
-            </article>
-            <article class="image-card">
-              <img src="assets/alumnos-convivencia.jpeg" alt="Estudiantes trabajando colaborativamente en sala de clases" />
-              <div class="image-label"><strong>Estudiantes al centro</strong><span>Información consolidada para actuar a tiempo y con criterio institucional.</span></div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="image-band" aria-label="Comunidad escolar TCDX Convivir"><div class="container"><div class="section-title"><h2>Convivencia escolar con mirada de comunidad.</h2><p>La gestión de convivencia no ocurre solo en una oficina: conecta estudiantes, familias, docentes, equipos directivos y responsables institucionales. TCDX Convivir ordena esa operación en un sistema único.</p></div><div class="image-grid"><article class="image-card large"><img src="assets/docentes-convivencia.jpeg" alt="Equipo docente reunido para trabajar acuerdos de convivencia escolar" /><div class="image-label"><strong>Equipos docentes coordinados</strong><span>Seguimiento, acuerdos, responsables y acciones internas con trazabilidad.</span></div></article><div class="image-stack"><article class="image-card"><img src="assets/familias-comunidad.jpeg" alt="Familias y estudiantes participando en actividad escolar comunitaria" /><div class="image-label"><strong>Familias involucradas</strong><span>Comunicación institucional y respaldo documental para la gestión escolar.</span></div></article><article class="image-card"><img src="assets/alumnos-convivencia.jpeg" alt="Estudiantes trabajando colaborativamente en sala de clases" /><div class="image-label"><strong>Estudiantes al centro</strong><span>Información consolidada para actuar a tiempo y con criterio institucional.</span></div></article></div></div></div></section>
 
-    <section id="modulos">
-      <div class="container">
-        <div class="section-title">
-          <h2>Una plataforma especializada, no un módulo genérico.</h2>
-          <p>Diseñada para apoyar la operación diaria de convivencia escolar, con flujos claros para equipos directivos, encargados de convivencia, inspectores, docentes y administración institucional.</p>
-        </div>
-        <div class="cards">
-          <article class="card"><div class="icon">01</div><h3>Incidentes y anotaciones</h3><p>Registro guiado de situaciones, clasificación inicial, participantes, contexto, observaciones y acciones asociadas.</p></article>
-          <article class="card"><div class="icon">02</div><h3>Alertas y derivaciones</h3><p>Alertas operativas, asignación de responsables, derivaciones internas, seguimiento y control de vencimientos.</p></article>
-          <article class="card"><div class="icon">03</div><h3>Gestión de casos</h3><p>Apertura, clasificación, protocolo asociado, timeline, checklist de cierre, reapertura auditada y trazabilidad completa.</p></article>
-          <article class="card"><div class="icon">04</div><h3>Ficha consolidada</h3><p>Vista institucional del estudiante con anotaciones, alertas, derivaciones, casos, formularios, evidencias y documentos.</p></article>
-          <article class="card"><div class="icon">05</div><h3>Formularios y evidencias</h3><p>Plantillas, respuestas, medios verificadores, documentos asociados y control de acceso a información sensible.</p></article>
-          <article class="card"><div class="icon">06</div><h3>Reportes internos</h3><p>Indicadores por periodo, curso, tipo, estado y responsable para apoyar decisiones institucionales y seguimiento operativo.</p></article>
-        </div>
-      </div>
-    </section>
+    <section id="modulos"><div class="container"><div class="section-title"><h2>Una plataforma especializada, no un módulo genérico.</h2><p>Diseñada para apoyar la operación diaria de convivencia escolar, con flujos claros para equipos directivos, encargados de convivencia, inspectores, docentes y administración institucional.</p></div><div class="cards"><article class="card"><div class="icon">01</div><h3>Incidentes y anotaciones</h3><p>Registro guiado de situaciones, clasificación inicial, participantes, contexto, observaciones y acciones asociadas.</p></article><article class="card"><div class="icon">02</div><h3>Alertas y derivaciones</h3><p>Alertas operativas, asignación de responsables, derivaciones internas, seguimiento y control de vencimientos.</p></article><article class="card"><div class="icon">03</div><h3>Gestión de casos</h3><p>Apertura, clasificación, protocolo asociado, timeline, checklist de cierre, reapertura auditada y trazabilidad completa.</p></article><article class="card"><div class="icon">04</div><h3>Ficha consolidada</h3><p>Vista institucional del estudiante con anotaciones, alertas, derivaciones, casos, formularios, evidencias y documentos.</p></article><article class="card"><div class="icon">05</div><h3>Formularios y evidencias</h3><p>Plantillas, respuestas, medios verificadores, documentos asociados y control de acceso a información sensible.</p></article><article class="card"><div class="icon">06</div><h3>Reportes internos</h3><p>Indicadores por periodo, curso, tipo, estado y responsable para apoyar decisiones institucionales y seguimiento operativo.</p></article></div></div></section>
 
-    <section id="flujo">
-      <div class="container split">
-        <div class="panel">
-          <div class="eyebrow">Flujo operacional</div>
-          <h2>Del registro inicial al cierre documentado.</h2>
-          <p>TCDX Convivir ordena el ciclo completo de gestión interna, evitando registros dispersos, pérdida de evidencias y seguimiento informal de casos sensibles.</p>
-        </div>
-        <div class="steps">
-          <div class="step"><div class="step-num">1</div><div><strong>Registrar situación</strong><span>Incidente, anotación o evento relevante con datos mínimos y contexto institucional.</span></div></div>
-          <div class="step"><div class="step-num">2</div><div><strong>Evaluar y derivar</strong><span>Clasificación, alerta, responsable, derivación interna y plazos de seguimiento.</span></div></div>
-          <div class="step"><div class="step-num">3</div><div><strong>Gestionar caso</strong><span>Timeline, evidencias, entrevistas, formularios, medidas internas y estados controlados.</span></div></div>
-          <div class="step"><div class="step-num">4</div><div><strong>Cerrar con trazabilidad</strong><span>Checklist, validación de acciones, documentos asociados y reapertura auditada si corresponde.</span></div></div>
-        </div>
-      </div>
-    </section>
+    <section id="flujo"><div class="container split"><div class="panel"><div class="eyebrow">Flujo operacional</div><h2>Del registro inicial al cierre documentado.</h2><p>TCDX Convivir ordena el ciclo completo de gestión interna, evitando registros dispersos, pérdida de evidencias y seguimiento informal de casos sensibles.</p></div><div class="steps"><div class="step"><div class="step-num">1</div><div><strong>Registrar situación</strong><span>Incidente, anotación o evento relevante con datos mínimos y contexto institucional.</span></div></div><div class="step"><div class="step-num">2</div><div><strong>Evaluar y derivar</strong><span>Clasificación, alerta, responsable, derivación interna y plazos de seguimiento.</span></div></div><div class="step"><div class="step-num">3</div><div><strong>Gestionar caso</strong><span>Timeline, evidencias, entrevistas, formularios, medidas internas y estados controlados.</span></div></div><div class="step"><div class="step-num">4</div><div><strong>Cerrar con trazabilidad</strong><span>Checklist, validación de acciones, documentos asociados y reapertura auditada si corresponde.</span></div></div></div></div></section>
 
-    <section id="seguridad" class="security">
-      <div class="container">
-        <div class="section-title">
-          <h2>Arquitectura SaaS preparada para operación institucional.</h2>
-          <p>El diseño considera separación por cliente y establecimiento, control de permisos, auditoría, privacidad operacional y una API institucional para integraciones controladas.</p>
-        </div>
-        <div class="security-grid">
-          <div class="security-item"><strong>Aislamiento multi-tenant</strong><span>Datos segregados por sostenedor, colegio y alcance del usuario.</span></div>
-          <div class="security-item"><strong>Roles y permisos</strong><span>Acceso diferenciado para administración, convivencia, docentes y soporte.</span></div>
-          <div class="security-item"><strong>Auditoría crítica</strong><span>Registro de acciones sensibles, descargas, cambios de caso y uso de API.</span></div>
-          <div class="security-item"><strong>API institucional</strong><span>Conexión server-to-server con scopes y trazabilidad por cliente técnico.</span></div>
-        </div>
-      </div>
-    </section>
+    <section id="seguridad" class="security"><div class="container"><div class="section-title"><h2>Arquitectura SaaS preparada para operación institucional.</h2><p>El diseño considera separación por cliente y establecimiento, control de permisos, auditoría, privacidad operacional y una API institucional para integraciones controladas.</p></div><div class="security-grid"><div class="security-item"><strong>Aislamiento multi-tenant</strong><span>Datos segregados por sostenedor, colegio y alcance del usuario.</span></div><div class="security-item"><strong>Roles y permisos</strong><span>Acceso diferenciado para administración, convivencia, docentes y soporte.</span></div><div class="security-item"><strong>Auditoría crítica</strong><span>Registro de acciones sensibles, descargas, cambios de caso y uso de API.</span></div><div class="security-item"><strong>API institucional</strong><span>Conexión server-to-server con scopes y trazabilidad por cliente técnico.</span></div></div></div></section>
 
-    <section>
-      <div class="container">
-        <div class="section-title">
-          <h2>Enfoque prudente para colegios chilenos.</h2>
-          <p>La plataforma se presenta como herramienta de apoyo a la gestión interna de convivencia escolar. No reemplaza el criterio profesional, las obligaciones institucionales ni los protocolos oficiales de cada establecimiento.</p>
-        </div>
-        <div class="cards">
-          <article class="card"><h3>Para equipos de convivencia</h3><p>Menos dispersión documental, mejor control de seguimiento y una vista clara del estado de cada caso.</p></article>
-          <article class="card"><h3>Para directivos</h3><p>Indicadores internos, trazabilidad por responsable y visibilidad operacional sin depender de planillas aisladas.</p></article>
-          <article class="card"><h3>Para sostenedores</h3><p>Administración multi-establecimiento, estándares comunes y capacidad de supervisión agregada.</p></article>
-        </div>
-      </div>
-    </section>
+    <section><div class="container"><div class="section-title"><h2>Enfoque prudente para colegios chilenos.</h2><p>La plataforma se presenta como herramienta de apoyo a la gestión interna de convivencia escolar. No reemplaza el criterio profesional, las obligaciones institucionales ni los protocolos oficiales de cada establecimiento.</p></div><div class="cards"><article class="card"><h3>Para equipos de convivencia</h3><p>Menos dispersión documental, mejor control de seguimiento y una vista clara del estado de cada caso.</p></article><article class="card"><h3>Para directivos</h3><p>Indicadores internos, trazabilidad por responsable y visibilidad operacional sin depender de planillas aisladas.</p></article><article class="card"><h3>Para sostenedores</h3><p>Administración multi-establecimiento, estándares comunes y capacidad de supervisión agregada.</p></article></div></div></section>
 
-    <section id="contacto" class="cta">
-      <div class="container">
-        <div class="cta-box">
-          <h2>Solicita una presentación de TCDX Convivir.</h2>
-          <p>Conversemos sobre cómo ordenar la gestión de convivencia escolar de tu establecimiento o red de colegios con una plataforma SaaS segura, trazable y especializada.</p>
-          <a class="button primary" href="mailto:contacto@tecdex.cl?subject=Solicitud%20demo%20TCDX%20Convivir">Contactar a TCDX</a>
-        </div>
-      </div>
-    </section>
+    <section id="contacto" class="cta"><div class="container"><div class="cta-box"><h2>Solicita una presentación de TCDX Convivir.</h2><p>Conversemos sobre cómo ordenar la gestión de convivencia escolar de tu establecimiento o red de colegios con una plataforma SaaS segura, trazable y especializada.</p><a class="button primary" href="mailto:contacto@tecdex.cl?subject=Solicitud%20demo%20TCDX%20Convivir">Contactar a TCDX</a></div></div></section>
   </main>
 
-  <footer>
-    <div class="container footer-grid">
-      <span class="footer-brand"><img src="https://tecdex.net/wp-content/uploads/2020/04/logo-original.svg" alt="Tecdex" />© TCDX / Tecdex. Plataforma SaaS para gestión interna de convivencia escolar.</span>
-      <span class="footer-meta">Uso institucional · Seguridad · Trazabilidad · Reportes internos</span>
-    </div>
-  </footer>
+  <footer><div class="container footer-grid"><span class="footer-brand"><svg class="tecdex-logo" viewBox="0 0 1051.5 277.7" role="img" aria-label="Tecdex" xmlns="http://www.w3.org/2000/svg"><circle fill="#F9C763" cx="70.3" cy="143.5" r="60.2"/><circle fill="#5CB2B1" cx="248.9" cy="41.3" r="36.5"/><circle fill="#6598CC" cx="261.3" cy="208.4" r="60.6"/><text x="365" y="180" fill="#49494A" font-family="Arial, sans-serif" font-size="132" font-weight="500" letter-spacing="-3">Tecdex</text></svg>© TCDX / Tecdex. Plataforma SaaS para gestión interna de convivencia escolar.</span><span class="footer-meta">Uso institucional · Seguridad · Trazabilidad · Reportes internos</span></div></footer>
 </body>
 </html>
